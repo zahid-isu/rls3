@@ -150,22 +150,20 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"> RLS3: RL-Based Synthetic Sample Selection to Enhance
-            Spatial Reasoning in Vision-Language Models for
-            Indoor Autonomous Perception</h1>
+          <h1 class="title is-1 publication-title"> RLS3: RL-Based Synthetic Sample Selection to Enhance Spatial Reasoning in Vision-Language Models for Indoor Autonomous Perception</h1>
           <div class="is-size-5 publication-authors">
             <!-- Paper authors -->
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/chih-hsuan-yang-isu/" target="_blank">Joshua R. Waite,</a>
+              <a href="https://www.linkedin.com/in/jrwaite/" target="_blank">Joshua R. Waite,</a>
             </span>
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/benjaminfeuer/" target="_blank">Md Zahid Hasan,</a>
+              <a href="https://www.linkedin.com/in/zahid-isu/" target="_blank">Md Zahid Hasan,</a>
             </span>
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/talukder-zaki-jubery-23322551/" target="_blank">Qisai Liu,</a>
+              <a href="https://www.linkedin.com/in/qisai/" target="_blank">Qisai Liu,</a>
             </span>
             <span class="author-block">
-              <a href="https://www.arizona.edu/" target="_blank">Zhanhong Jiang,</a>
+              <a href="https://www.linkedin.com/in/zhanhongjiang/" target="_blank">Zhanhong Jiang,</a>
             </span>
             <!-- <span class="author-block">
               <a href="https://www.linkedin.com/in/andre-nakkab-2bb42b170/" target="_blank">Andre Nakkab,</a>
@@ -192,7 +190,7 @@
               <a href="https://chinmayhegde.github.io/" target="_blank">Chinmay Hegde,</a>
             </span>
             <span class="author-block">
-              <a href="https://www.engineering.iastate.edu/people/profile/soumiks/" target="_blank">Soumik Sarkar,</a>
+              <a href="https://www.engineering.iastate.edu/people/profile/soumiks/" target="_blank">Soumik Sarkar</a>
             </span>
             <!-- <span class="author-block">
               <a href="https://datascience.arizona.edu/person/nirav-merchant" target="_blank">Nirav Merchant,</a>
@@ -213,7 +211,7 @@
                 <span class="icon">
                   <i class="fas fa-file-pdf"></i>
                 </span>
-                <span>Paper</span>
+                <span>ArXiv</span>
               </a>
             </span>
             <!-- Supplementary PDF link -->
@@ -283,7 +281,8 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="static/images/rls3_banner_feedback.pdf" alt="ArborCLIP">
+      <!-- <img src="static/images/rls3_banner_feedback.pdf" alt="RLS3"> -->
+      <embed src="static/images/rls3_banner_feedback.pdf" type="application/pdf" width="100%" height="500px" />
       <h2 class="subtitle has-text-centered">
         <b>Overview of RLS3 to generate a feasible and informative batch for fine-tuning a VLM to improve spatial reasoning.
       </h2>
@@ -301,17 +300,19 @@
         <div class="content has-text-justified">
           <p>
 
-            We introduce BIOTROVE, the largest publicly accessible dataset designed to advance AI applications in biodiversity. 
-            Curated from the iNaturalist platform and vetted by domain experts to include only research-grade data, BIOTROVE contains 161.9 million images, 
-            offering unprecedented scale and diversity from three primary kingdoms: <i>Animalia</i> ("animals"), <i>Fungi</i> ("fungi"), and <i>Plantae</i> ("plants"), spanning 
-            approximately 366.6K species. Each image is annotated with scientific names, taxonomic hierarchies, and common names, providing rich metadata to support accurate 
-            AI model development across diverse species and ecosystems. We demonstrate the value of BIOTROVE by releasing a suite of CLIP models trained using a subset of 40 million 
-            captioned images, known as BIOTROVE-TRAIN. This subset focuses on seven categories within the dataset that are underrepresented in standard image recognition models, 
-            selected for their critical role in biodiversity and agriculture: <i>Aves</i>("birds"),<i>Arachnida</i>("spiders/ticks/mites"),<i>Insecta</i>("insects"),<i>Plantae</i>("plants"),<i>Fungi</i>("fungi"),
-            <i>Mollusca</i>("snails") and <i>Reptilia</i>("snakes/lizards"). To support rigorous assessment, we introduce several new benchmarks and report model accuracy for zero-shot learning across 
-            life stages, rare species, confounding species, and multiple taxonomic levels. We anticipate that BIOTROVE will spur the development of AI models capable of supporting digital tools 
-            for pest control, crop monitoring, biodiversity assessment, and environmental conservation. These advancements are crucial for ensuring food security, preserving ecosystems, and mitigating 
-            the impacts of climate change. BIOTROVE is publicly available, easily accessible, and ready for immediate use.
+            Vision-language model (VLM) fine-tuning for application-specific visual grounding based on natural language instructions has become one of the 
+            most popular approaches for learning-enabled autonomous systems. However, such fine-tuning relies heavily on high-quality datasets to 
+            achieve successful performance in various downstream tasks. Additionally, VLMs often encounter limitations
+            due to insufficient and imbalanced fine-tuning data. To address these issues, we propose a new generalizable framework to improve
+            VLM fine-tuning by integrating it with a reinforcement learning (RL) agent. Our method utilizes the RL agent to manipulate objects
+            within an indoor setting to create synthetic data for fine-tuning to address certain vulnerabilities of the VLM. Specifically, we use the
+            performance of the VLM to provide feedback to the RL agent to generate informative data that efficiently fine-tune the VLM over
+            the targeted task (e.g. <i>spatial reasoning</i>). The key contribution of this work is developing a framework where the RL agent serves as
+            an informative data sampling tool and assists the VLM in order to enhance performance and address task-specific vulnerabilities. By
+            targeting the data sampling process to address the weaknesses of the VLM, we can effectively train a more context-aware model. In
+            addition, generating synthetic data allows us to have precise control over each scene and generate granular ground truth captions. Our
+            results show that the proposed data generation approach improves the spatial reasoning performance of VLMs, which demonstrates
+            the benefits of using RL-guided data generation in vision-language tasks.
           </p>
         </div>
       </div>
@@ -537,12 +538,7 @@
       <h1 class="title is-4">Acknowledgements</h1>
       <div class="content">
         <p>
-          This work was supported by the AI Research Institutes program supported by the <b>NSF</b> and <b>USDA-NIFA</b> under 
-          <a href="https://aiira.iastate.edu/" target="_blank" class="underline-link">AI Institute: for Resilient Agriculture (AIIRA)</a>, 
-          <code>Award No.2021-67021-35329</code>. This was also partly supported by the NSF under CPS Frontier grant <code>CNS-1954556</code>. Additionally, we gratefully acknowledge the 
-          support of NYU IT - <a href="https://www.nyu.edu/life/information-technology/research-computing-services/high-performance-computing.html" 
-          target="_blank" class="underline-link"> NYU High Performance Computing</a>, <a href="https://sites.google.com/nyu.edu/nyu-hpc/hpc-systems/greene" 
-          target="_blank" class="underline-link"> NYU Greene</a> resources, services, and staff expertise.
+          This work was partly supported by the National Science Foundation, USA, under grants CAREER CNS-1845969 and CPS Frontier <code>CNS-1954556</code>
         </p>
         </p>
       </div>
