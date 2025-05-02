@@ -150,7 +150,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"> RLS3: RL-Based Synthetic Sample Selection to Enhance Spatial Reasoning in Vision-Language Models for Indoor Autonomous Perception</h1>
+          <h1 class="title is-1 publication-title"> RLS3: RL-Based Synthetic Sample Selection to Enhance Spatial Reasoning in <br>Vision-Language Models for Indoor Autonomous Perception</h1>
           <div class="is-size-5 publication-authors">
             <!-- Paper authors -->
             <span class="author-block">
@@ -283,7 +283,7 @@
     <div class="hero-body">
       <img src="static/images/rls3_banner_feedback.png" alt="RLS3">
       <h2 class="subtitle has-text-centered">
-        <b>Overview of RLS3 to generate a feasible and informative batch for fine-tuning a VLM to improve spatial reasoning.
+        <b>Overview of RLS3 to generate a feasible & informative batch for fine-tuning a VLM to improve spatial reasoning.
       </h2>
     </div>
   </div>
@@ -360,19 +360,27 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Dataset Features</h2>
+      <h2 class="title is-3">Method</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <!-- First Image -->
           <div class="publication-image" id="image-container-1">
-            <img src="static/images/category_distribution.png" alt="Category Distribution" style="cursor: pointer; width: 80%; height: auto;">
+            <img src="static/images/rls3_framework.png" alt="Category Distribution" style="cursor: pointer; width: 80%; height: auto;">
           </div>
           <p class="description">
-            <b\>Distribution of the BioTrove dataset.</b> (a) Size of the top seven Phyla in the
-            BioTrove dataset. (b) Species counts for the top seven Phyla. (c) The 40 highest occurring
-            species in entire BioTrove dataset.
-          </p>
+            <b\>A Detailed Overview of Our Proposed RLS3 Framework</b>
+              The scheduler acts as a synchronizer between the processes. The loop begins with data generation where the RL agent takes 
+              <em>T</em> timesteps in which <em>T<sub>0</sub> ≤ T</em> image-metadata samples are generated from the Unity environment. 
+              In each step, the agent receives an intrinsic reward based on the feasibility of the generated sample. The episode is paused 
+              on the last step to allow the following processes to complete. 
+              Next, the metadata is used in the prompt generation process to create captions describing a spatial relation. The 
+              <em>T<sub>0</sub></em> image-text pairs are then inputted to the VLM for inference. The performance of the VLM is used as an 
+              extrinsic reward signal <em>J<sub>2</sub></em> for the RL agent at the end of the episode.
+              Steps 1, 2, and 3 repeat for <em>E</em> RL episodes to generate a diverse batch of data for fine-tuning. Diversity is 
+              further increased in the fine-tuning batch by sampling the generated data with sampling rate <em>η</em> for each episode, 
+              resulting in a fine-tuning batch size of <em>EηT<sub>0</sub></em>. After fine-tuning the VLM finishes, the batch is cleared 
+              and the process repeats for the next iteration.
           
           <!-- Second Image -->
           <div class="publication-image" id="image-container-2">
