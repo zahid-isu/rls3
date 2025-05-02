@@ -147,9 +147,9 @@
 
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container is-fullhd">
       <div class="columns is-centered">
-        <div class="column has-text-centered">
+        <div class="column is-12 has-text-centered">
           <h1 class="title is-1 publication-title"> 
             RLS3: RL-Based Synthetic Sample Selection to Enhance Spatial Reasoning in <br>Vision-Language Models for Indoor Autonomous Perception
           </h1>
@@ -281,7 +281,7 @@
 </style>
 <!-- banner image-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-fullhd">
     <div class="hero-body">
       <img src="static/images/rls3_banner_feedback.png" alt="RLS3">
       <h2 class="subtitle has-text-centered">
@@ -379,9 +379,9 @@
         </p>
       </div>
       <div class="image-container" style="text-align: center;">
-        <img src="static/images/rls3_framework.png" alt="datprep" style="width: 80%; height: auto;">
+        <img src="static/images/rls3_framework.png" alt="datprep" style="width: 90%; height: auto;">
         <p class="caption has-text-centered">
-        <b\>A Detailed Overview of the RLS3 Framework</b>
+        <b>A Detailed Overview of the RLS3 Framework</b>
         </p>
       </div>
     </div>
@@ -401,7 +401,7 @@
       <div class="image-container" style="text-align: center;">
         <img src="static/images/unity_env.png" alt="lifestages" style="width: 60%; height: auto;">
         <p class="caption has-text-centered">
-          <b>The Unity environment</b>There is one active scene at a time, which is cycled over
+          There is one active scene at a time, which is cycled over
           the episode. Each step selects one of the three active objects
           and is swapped with another in the object container. Only a
           handful of the available objects are shown here.
@@ -416,11 +416,6 @@
   <div class="hero-body" style="padding-bottom: 1rem;">
     <div class="container">
       <h2 class="title is-4">Angle-based Prompt Generation</h3>
-      <div class="content">
-        <p>
-          Illustration of our template-based prompt generation.
-        </p>
-      </div>
       <div class="image-container" style="text-align: center;">
         <img src="static/images/prompt_gen.png" alt="lifestages" style="width: 60%; height: auto;">
         <p class="caption has-text-centered">
@@ -438,59 +433,29 @@
 </section>
 
 
-<!-- dataprep -->
-<section class="hero is-small" style="margin-bottom: 1rem;">
-  <div class="hero-body" style="padding-bottom: 1rem;">
-    <div class="container">
-      <h2 class="title is-3">Data Preparation</h2>
-      <div class="content">
-        <p>
-          Our <a href="https://github.com/baskargroup/BioTrove/blob/main/Arbor-preprocess/README_arbor_process.md" target="_blank" class="underline-link">Github</a> includes the pipeline and <a href="https://pypi.org/project/arbor-process/" target="_blank" class="underline-link">biotrove-process</a> package installation instructions for the data preparation. 
-          The metadata can be downloaded from the HuggingFace dataset cards: <a href="https://huggingface.co/datasets/BGLab/BioTrove-Train" target="_blank" class="underline-link">BioTrove-Train</a> and <a href="https://huggingface.co/datasets/BGLab/BioTrove" target="_blank" class="underline-link">BioTrove (main)</a>. This procedure will generate machine learning-ready image-text pairs from the downloaded metadata in four steps:
-        </p>
-      </div>
-      <div class="image-container" style="text-align: center;">
-        <img src="static/images/dataprep.png" alt="datprep" style="width: 80%; height: auto;">
-      </div>
-    </div>
-  </div>
-</section>
-
 <style>
   .underline-link {
     text-decoration: underline;
   }
 </style>
-<!-- end of dataprep -->
 
-<!-- ArborCLIP model -->
+<!--  -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">BioTrove-CLIP Model</h2>
+      <h2 class="title is-3">Results</h2>
       <!-- Explanation text space -->
       <div class="content">
         <p>
-          We use <b>BioTrove-Train</b> to train new CLIP-style foundation models, and then evaluate them on zero-shot image classification tasks. 
-          A <code>ViT-B/16</code> backbone initialized from the OpenAI <a href="https://arxiv.org/abs/2103.00020" target="_blank" class="underline-link">CLIP</a> weights, 
-          a <code>ViT-L/14</code> from the <a href="https://github.com/facebookresearch/MetaCLIP" target="_blank" class="underline-link">MetaCLIP</a> and 
-          a <code>ViT-B/16</code> from the <a href="https://arxiv.org/abs/2311.18803" target="_blank" class="underline-link">BioCLIP</a> checkpoint were trained to develop these models.
-          The BioTrove-CLIP models are designed to analyze and categorize various plant species using advanced machine learning techniques. 
-          It leverages a vast dataset and sophisticated algorithms to achieve high accuracy in species recognition.
+          
         </p>
       </div>
       <!-- Static Image with Caption -->
       <div class="image-container" style="text-align: center;">
-        <img src="static/images/bioTroveCLIPresults.png" alt="ArborCLIP Model" style="width: 80%; height: auto; max-height: 400px;">
-        <p class="caption has-text-centered"><b>BioTrove-CLIP</b> performances well on various benchmarks. The top three rows
-          are pre-trained checkpoints: OpenAI-B refers to OpenAI's <code>ViT-B-16</code> model, BioCLIP-B
-          refers to the BioCLIP <code>ViT-B-16</code> model, and MetaCLIP-L refers to the MetaCLIP-cc <code>ViTL-14</code> model. 
-          The bottom three rows are Biotrove-Clip models fine-tuned on different
-          checkpoints: <code>BT-CLIP-O</code> (from OpenAI-B), <code>BT-CLIP-B</code> (from BioCLIP-B), and <code>BT-CLIP-M</code>
-          (from MetaCLIP-L). Benchmark abbreviations: <code>BTU</code> (Biotrove-Unseen, <code>n=300</code>), <code>BTB</code>
-          (Biotrove-Balanced, <code>n=2253</code>), <code>BCR</code> (BioCLIP-Rare, <code>n=400</code>), <code>F</code> (Fungi, <code>n=25</code>), <code>I2</code> (Insects-2,
-          <code>n=102</code>), <code>B</code> (Birds-525, <code>n=525</code>), <code>LS</code> (Life-Stages, <code>n=20</code>), and <code>DW</code> (DeepWeeds, <code>n=9</code>).<code>95%</code>
-          confidence intervals <code>(±CI)</code> are included.</p>
+        <img src="static/images/pg_score_vs_data.png" alt="PaliGemma Model" style="width: 80%; height: auto; max-height: 400px;">
+        <p class="caption has-text-centered">
+          PaliGemma score (avg ±𝑠𝑡𝑑) on testing data vs cumulative generated data across 5 runs for both SAC and random agents
+        </p>
       </div>
     </div>
   </div>
