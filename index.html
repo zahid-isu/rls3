@@ -283,7 +283,7 @@
 <section class="hero teaser">
   <div class="container is-fullhd">
     <div class="hero-body">
-      <img src="static/images/rls3_banner_feedback.png" alt="RLS3" style="width: 80%;">
+      <img src="static/images/rls3_banner_feedback.png" alt="RLS3" style="display: block; margin: 0 auto; width: 80%;">
       <h2 class="subtitle has-text-centered">
         <b>Overview of RLS3 to generate a feasible & informative batch for fine-tuning a VLM to improve spatial reasoning.</b>
       </h2>
@@ -469,14 +469,14 @@
       <h2 class="title is-3">Spatial Reasoning Performance</h2>
       <div class="columns is-vcentered">
         <div class="column has-text-centered">
-          <img src="static/images/pg_term_spider_with_counts_combined_tall.png" alt="PaliGemma Model" style="width: 80%; height: auto;">
+          <img src="static/images/pg_term_spider_with_counts_combined_tall.png" alt="PaliGemma Model" style="width: 70%; height: auto;">
           <p class="caption has-text-centered">
             PaliGemma score (avg±std) separated by spatial term for RLS3 with an SAC and random agent. Cumulative 
             term counts of data generated for fine-tuning are given in () for SAC and [] for random agents
           </p>
         </div>
         <div class="column has-text-centered">
-          <img src="static/images/pg_term_complexity_iterations.png" alt="PaliGemma Model" style="width: 90%; height: auto;">
+          <img src="static/images/pg_term_complexity_iterations.png" alt="PaliGemma Model" style="width: 120%; height: auto;">
           <p class="caption has-text-centered">
             Average PaliGemma score by prompt complexity vs iteration for SAC agent
           </p>
@@ -493,13 +493,13 @@
       <h2 class="title is-3">Dynamics of VLM Fine-Tuning</h2>
       <div class="columns is-vcentered">
         <div class="column has-text-centered">
-          <img src="static/images/pg_loss.png" alt="PaliGemma Model" style="width: 70%; height: auto;">
+          <img src="static/images/pg_loss.png" alt="PaliGemma Model" style="width: 100%; height: auto;">
           <p class="caption has-text-centered">
             Concatenated PaliGemma loss plots for iterative fine-tuning
           </p>
         </div>
         <div class="column has-text-centered">
-          <img src="static/images/pg_early_stop.png" alt="PaliGemma Model" style="width: 130%; height: auto;">
+          <img src="static/images/pg_early_stop.png" alt="PaliGemma Model" style="width: 100%; height: auto;">
           <p class="caption has-text-centered">
             PaliGemma score (avg±std) on validation data vs fine-tuning iteration across 5 runs for the SAC agent with the early stopping point indicated
           </p>
