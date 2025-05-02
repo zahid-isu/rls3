@@ -439,26 +439,6 @@
   }
 </style>
 
-<!--  -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Results</h2>
-      <div class="image-container" style="text-align: center;">
-        <img src="static/images/pg_score_vs_data.png" alt="PaliGemma Model" style="width: 50%; height: auto;">
-        <p class="caption has-text-centered">
-          PaliGemma score (avg±std) on testing data vs cumulative generated data across 5 runs for both SAC and random agents
-        </p>
-      </div>
-      <div class="image-container" style="text-align: center;">
-        <img src="static/images/acc_vs_data_clip_negclip.png" alt="PaliGemma Model" style="width: 50%; height: auto;">
-        <p class="caption has-text-centered">
-          CLIP accuracy (avg±std) on testing data vs cumulative generated data across 3 runs for both SAC and random agents.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="hero is-small">
   <div class="hero-body">
@@ -466,13 +446,13 @@
       <h2 class="title is-3">Results</h2>
       <div class="columns is-vcentered">
         <div class="column has-text-centered">
-          <img src="static/images/pg_score_vs_data.png" alt="PaliGemma Model" style="width: 100%; height: auto;">
+          <img src="static/images/pg_score_vs_data.png" alt="PaliGemma Model" style="width: 80%; height: auto;">
           <p class="caption has-text-centered">
             PaliGemma score (avg±std) on testing data vs cumulative generated data across 5 runs for both SAC and random agents
           </p>
         </div>
         <div class="column has-text-centered">
-          <img src="static/images/acc_vs_data_clip_negclip.png" alt="PaliGemma Model" style="width: 100%; height: auto;">
+          <img src="static/images/acc_vs_data_clip_negclip.png" alt="PaliGemma Model" style="width: 80%; height: auto;">
           <p class="caption has-text-centered">
             CLIP accuracy (avg±std) on testing data vs cumulative generated data across 3 runs for both SAC and random agents.
           </p>
@@ -483,22 +463,52 @@
 </section>
 
 
-<!-- Model weights -->
-<section class="hero is-medium" style="margin-bottom: 1rem;">
-  <div class="hero-body" style="padding-bottom: 1rem;">
+<section class="hero is-small">
+  <div class="hero-body">
     <div class="container">
-      <h1 class="title is-4">Model Weights</h1>
-      <div class="content">
-        <p>
-        The <b>BioTrove-CLIP</b> models were developed for the benefit of the AI community as an open-source product. 
-        We released three <b>BioTrove-CLIP</b> trained models based on OpenAI's <a href="https://openai.com/index/clip/" target="_blank" class="underline-link">CLIP</a> model. 
-        The models were trained on <b>BioTrove-Train</b> dataset. Please utilize our HuggingFace <a href="https://huggingface.co/BGLab/BioTrove-CLIP" target="_blank" class="underline-link">Model card</a> to access the model checkpoints.
-        </p>
+      <h2 class="title is-3">Spatial Reasoning Performance</h2>
+      <div class="columns is-vcentered">
+        <div class="column has-text-centered">
+          <img src="static/images/pg_term_spider_with_counts_combined_tall.png" alt="PaliGemma Model" style="width: 80%; height: auto;">
+          <p class="caption has-text-centered">
+            PaliGemma score (avg±std) separated by spatial term for RLS3 with an SAC and random agent. Cumulative 
+            term counts of data generated for fine-tuning are given in () for SAC and [] for random agents
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <img src="static/images/pg_term_complexity_iterations.png" alt="PaliGemma Model" style="width: 80%; height: auto;">
+          <p class="caption has-text-centered">
+            Average PaliGemma score by prompt complexity vs iteration for SAC agent
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End  Model weights -->
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Dynamics of VLM Fine-Tuning</h2>
+      <div class="columns is-vcentered">
+        <div class="column has-text-centered">
+          <img src="static/images/pg_loss.png" alt="PaliGemma Model" style="width: 80%; height: auto;">
+          <p class="caption has-text-centered">
+            Concatenated PaliGemma loss plots for iterative fine-tuning
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <img src="static/images/pg_early_stop.png" alt="PaliGemma Model" style="width: 80%; height: auto;">
+          <p class="caption has-text-centered">
+            PaliGemma score (avg±std) on validation data vs fine-tuning iteration across 5 runs for the SAC agent with the early stopping point indicated
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- Acknowledgements -->
 <section class="hero is-medium" style="margin-bottom: 1rem;">
