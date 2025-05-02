@@ -393,16 +393,14 @@
       <h3 class="title is-4 has-text-centered">Unity Environment</h3>
       <div class="content">
         <p>
-        </p>
-      </div>
-      <div class="image-container" style="text-align: center;">
-        <img src="static/images/unity_env.png" alt="lifestages" style="width: 50%; height: auto;">
-        <p class="caption has-text-centered">
           There is one active scene at a time, which is cycled over
           the episode. Each step selects one of the three active objects
           and is swapped with another in the object container. Only a
           handful of the available objects are shown here.
         </p>
+      </div>
+      <div class="image-container" style="text-align: center;">
+        <img src="static/images/unity_env.png" alt="lifestages" style="width: 50%; height: auto;">
       </div>
     </div>
   </div>
@@ -413,9 +411,8 @@
   <div class="hero-body" style="padding-bottom: 1rem;">
     <div class="container">
       <h3 class="title is-4 has-text-centered">Angle-based Prompt Generation</h3>
-      <div class="image-container" style="text-align: center;">
-        <img src="static/images/prompt_gen.png" alt="lifestages" style="width: 50%; height: auto;">
-        <p class="caption has-text-centered">
+      <div class="content">
+        <p>
           The center of 'Object A' is located on the origin of the
           eight regions in the horizontal direction and 3 regions in the
           vertical direction in which spatial terms are selected. The
@@ -424,6 +421,9 @@
           the regions. The generated caption for this scenario is: “The
           small pot is above, behind and to the left of the yellow bowl."
         </p>
+      </div>
+      <div class="image-container" style="text-align: center;">
+        <img src="static/images/prompt_gen.png" alt="lifestages" style="width: 50%; height: auto;">
       </div>
     </div>
   </div>
@@ -450,7 +450,7 @@
           </p>
         </div>
         <div class="column has-text-centered">
-          <img src="static/images/acc_vs_data_clip_negclip.png" alt="PaliGemma Model" style="width: 90%; height: auto;">
+          <img src="static/images/acc_vs_data_clip_negclip.png" alt="PaliGemma Model" style="width: 100%; height: auto;">
           <p class="caption has-text-centered">
             CLIP accuracy (avg±std) on testing data vs cumulative generated data across 3 runs for both SAC and random agents.
           </p>
@@ -474,7 +474,7 @@
           </p>
         </div>
         <div class="column has-text-centered">
-          <img src="static/images/pg_term_complexity_iterations.png" alt="PaliGemma Model" style="width: 120%; height: auto;">
+          <img src="static/images/pg_term_complexity_iterations.png" alt="PaliGemma Model" style="width: 130%; height: auto;">
           <p class="caption has-text-centered">
             Average PaliGemma score by prompt complexity vs iteration for SAC agent
           </p>
@@ -491,7 +491,7 @@
       <h3 class="title is-3 has-text-centered">Dynamics of VLM Fine-Tuning</h3>
       <div class="columns is-vcentered">
         <div class="column has-text-centered">
-          <img src="static/images/pg_loss.png" alt="PaliGemma Model" style="width: 100%; height: auto;">
+          <img src="static/images/pg_loss.png" alt="PaliGemma Model" style="width: 95%; height: auto;">
           <p class="caption has-text-centered">
             Concatenated PaliGemma loss plots for iterative fine-tuning
           </p>
@@ -512,7 +512,7 @@
 <section class="hero is-medium" style="margin-bottom: 1rem;">
   <div class="hero-body" style="padding-bottom: 1rem;">
     <div class="container">
-      <h2 class="title is-4 has-text-centered">Acknowledgements</h2>
+      <h2 class="title is-3 has-text-centered">Acknowledgements</h2>
       <div class="content has-text-justified">
         <p>
           This work was partly supported by the National Science Foundation, USA, under grants CAREER CNS-1845969 and CPS Frontier CNS-1954556.
@@ -653,7 +653,7 @@
 <!--BibTex citation -->
 <section class="section" id="BibTeX">
   <div class="container is-max-widescreen content">
-      <h2 class="title">BibTeX</h2>
+    <h2 class="title has-text-centered">BibTeX</h2>
       <pre><code>
         @inproceedings{waiteICCPS2025
           author={Waite, Joshua R and Hasan, Md Zahid and Liu, Qisai and Jiang, Zhanhong and Hegde, Chinmay and Sarkar, Soumik},
