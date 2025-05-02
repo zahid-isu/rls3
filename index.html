@@ -406,62 +406,54 @@
 </section>
 
 
-<!-- Main Datasets Section -->
-<section class="hero is-medium" style="margin-bottom: 1rem;">
+<!-- Unity Subsection -->
+<section class="hero is-small" style="margin-bottom: 1rem;">
   <div class="hero-body" style="padding-bottom: 1rem;">
     <div class="container">
-      <h1 class="title is-3">Dataset Benchmarks</h1>
+      <h2 class="title is-4">Unity Environment</h3>
       <div class="content">
         <p>
-        <b>BioTrove </b> consists of several benchmark datasets - <b>BioTrove-Train(40M)</b> and <b>New Benchmarks</b>. The main BioTrove is ~162M in sample size.
+        </p>
+      </div>
+      <div class="image-container" style="text-align: center;">
+        <img src="static/images/unity_env.png" alt="lifestages" style="width: 80%; height: auto;">
+        <p class="caption has-text-centered">
+          <b>The Unity environment</b>There is one active scene at a time, which is cycled over
+          the episode. Each step selects one of the three active objects
+          and is swapped with another in the object container. Only a
+          handful of the available objects are shown here.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BioTroveTrain Subsection -->
+<!-- Promt generation Subsection -->
 <section class="hero is-small" style="margin-bottom: 1rem;">
   <div class="hero-body" style="padding-bottom: 1rem;">
     <div class="container">
-      <h2 class="title is-4">BioTrove-Train</h3>
+      <h2 class="title is-4">Angle-based Prompt Generation</h3>
       <div class="content">
         <p>
-        <b>BioTrove-Train</b> is a curated subset comprising approximately 40M samples and 33K species from the seven - <i>Aves</i>, <i>Arachnida</i>, <i>Insecta</i>, <i>Plantae</i>, <i>Fungi</i>, <i>Mollusca</i>, and <i>Reptilia</i> categories (iNaturalist prior to January 27, 2024).
-        It contains 30 to maximum of 50,000 samples per species. We conducted semi-global shuffling and divided the data into mini-batches of approximately 50,000 samples each. From these
-        mini-batches, 95% were randomly selected for training and validation, while the remaining 5% were reserved for testing.
+          Illustration of our template-based prompt generation.
         </p>
       </div>
       <div class="image-container" style="text-align: center;">
-        <img src="static/images/arboretum40m.png" alt="lifestages" style="width: 80%; height: auto;">
+        <img src="static/images/prompt_gen.png" alt="lifestages" style="width: 80%; height: auto;">
         <p class="caption has-text-centered">
-          Training data sources used in BioTrove-Train and Diversity in Different Taxonomy Levels. We integrate taxonomic labels into the images.
+          The center of 'Object A' is located on the origin of the
+          eight regions in the horizontal direction and 3 regions in the
+          vertical direction in which spatial terms are selected. The
+          horizontal regions are aligned such that 'behind' is facing
+          towards the camera. The cameras are aligned with the horizontal and vertical axes in this figure to more clearly show
+          the regions. The generated caption for this scenario is: “The
+          small pot is above, behind and to the left of the yellow bowl."
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- New Benchmark Subsection -->
-<section class="hero is-small" style="margin-bottom: 1rem;">
-  <div class="hero-body" style="padding-bottom: 1rem;">
-    <div class="container">
-      <h2 class="title is-4">New Benchmark</h3>
-      <div class="content">
-        <p>
-          From <b>BioTrove</b>, we created three new benchmark datasets for fine-grained image classification. They are- <b>BioTrove-Balanced</b>, <b>BioTrove-Unseen</b> and <b>BioTrove-LifeStages</b>.
-        </p>
-      </div>
-      <div class="image-container" style="text-align: center;">
-        <img src="static/images/lifestages.png" alt="lifestages" style="width: 80%; height: auto;">
-        <p class="caption has-text-centered">
-          (a) Example images from BioTrove-Unseen. (b) BioTrove-LIFE-STAGES with 20 class labels: four life stages 
-            (egg, larva, pupa, and adult) for five distinct insect species
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- dataprep -->
 <section class="hero is-small" style="margin-bottom: 1rem;">
