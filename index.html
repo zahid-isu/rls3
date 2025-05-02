@@ -358,48 +358,31 @@
 <!-- End image carousel -->
 
 
-<!-- data feature -->
-<section class="hero is-small">
-  <div class="hero-body">
+<!-- Method -->
+<section class="hero is-small" style="margin-bottom: 1rem;">
+  <div class="hero-body" style="padding-bottom: 1rem;">
     <div class="container">
       <h2 class="title is-3">Method</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <!-- First Image -->
-          <div class="publication-image" id="image-container-1">
-            <img src="static/images/rls3_framework.png" alt="Category Distribution" style="cursor: pointer; width: 80%; height: auto;">
-          </div>
-          <p class="description">
-            <b\>A Detailed Overview of the RLS3 Framework</b>
-              The scheduler acts as a synchronizer between the processes. The loop begins with data generation where the RL agent takes 
-              <em>T</em> timesteps in which <em>T<sub>0</sub> ≤ T</em> image-metadata samples are generated from the Unity environment. 
-              In each step, the agent receives an intrinsic reward based on the feasibility of the generated sample. The episode is paused 
-              on the last step to allow the following processes to complete. 
-              Next, the metadata is used in the prompt generation process to create captions describing a spatial relation. The 
-              <em>T<sub>0</sub></em> image-text pairs are then inputted to the VLM for inference. The performance of the VLM is used as an 
-              extrinsic reward signal <em>J<sub>2</sub></em> for the RL agent at the end of the episode.
-              Steps 1, 2, and 3 repeat for <em>E</em> RL episodes to generate a diverse batch of data for fine-tuning. Diversity is 
-              further increased in the fine-tuning batch by sampling the generated data with sampling rate <em>η</em> for each episode, 
-              resulting in a fine-tuning batch size of <em>EηT<sub>0</sub></em>. After fine-tuning the VLM finishes, the batch is cleared 
-              and the process repeats for the next iteration.
-          
-          <!-- Second Image -->
-          <!-- <div class="publication-image" id="image-container-2">
-            <img src="static/images/Treemap_BioTrove_cut.png" alt="Sample Image 2" style="cursor: pointer; width: 80%; height: auto;">
-          </div>
-          <p class="description">
-            <b\>Treemap diagram of the BioTrove dataset</b>, starting from Kingdom. The
-            nested boxes represent phyla, (taxonomic) classes, orders, and families. Box size represents
-            the relative number of samples.
-          </p>
-                    <div class="publication-image" id="image-container-3">
-            <img src="static/images/comparison.png" alt="Sample Image 3" style="cursor: pointer; width: 80%; height: auto;">
-          </div>
-          <p class="description">
-            Comparison of BioTrove dataset with existing biodiversity datasets. -->
-          </p>
-        </div>
+      <div class="content">
+        <p>
+          The scheduler acts as a synchronizer between the processes. The loop begins with data generation where the RL agent takes 
+          <em>T</em> timesteps in which <em>T<sub>0</sub> ≤ T</em> image-metadata samples are generated from the Unity environment. 
+          In each step, the agent receives an intrinsic reward based on the feasibility of the generated sample. The episode is paused 
+          on the last step to allow the following processes to complete. 
+          Next, the metadata is used in the prompt generation process to create captions describing a spatial relation. The 
+          <em>T<sub>0</sub></em> image-text pairs are then inputted to the VLM for inference. The performance of the VLM is used as an 
+          extrinsic reward signal <em>J<sub>2</sub></em> for the RL agent at the end of the episode.
+          Steps 1, 2, and 3 repeat for <em>E</em> RL episodes to generate a diverse batch of data for fine-tuning. Diversity is 
+          further increased in the fine-tuning batch by sampling the generated data with sampling rate <em>η</em> for each episode, 
+          resulting in a fine-tuning batch size of <em>EηT<sub>0</sub></em>. After fine-tuning the VLM finishes, the batch is cleared 
+          and the process repeats for the next iteration.
+        </p>
+      </div>
+      <div class="image-container" style="text-align: center;">
+        <img src="static/images/rls3_framework.png" alt="datprep" style="width: 80%; height: auto;">
+        <p class="caption has-text-centered">
+        <b\>A Detailed Overview of the RLS3 Framework</b>
+        </p>
       </div>
     </div>
   </div>
@@ -416,7 +399,7 @@
         </p>
       </div>
       <div class="image-container" style="text-align: center;">
-        <img src="static/images/unity_env.png" alt="lifestages" style="width: 80%; height: auto;">
+        <img src="static/images/unity_env.png" alt="lifestages" style="width: 60%; height: auto;">
         <p class="caption has-text-centered">
           <b>The Unity environment</b>There is one active scene at a time, which is cycled over
           the episode. Each step selects one of the three active objects
@@ -439,7 +422,7 @@
         </p>
       </div>
       <div class="image-container" style="text-align: center;">
-        <img src="static/images/prompt_gen.png" alt="lifestages" style="width: 80%; height: auto;">
+        <img src="static/images/prompt_gen.png" alt="lifestages" style="width: 60%; height: auto;">
         <p class="caption has-text-centered">
           The center of 'Object A' is located on the origin of the
           eight regions in the horizontal direction and 3 regions in the
