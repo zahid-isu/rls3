@@ -15,17 +15,22 @@ spatial reasoning, synthetic data generation, self-improving sampling, vision-la
 
 ## Citation
 ```
-@inproceedings{waiteICCPS2025
-    author={Waite, Joshua R and Hasan, Md Zahid and Liu, Qisai and Jiang, Zhanhong and Hegde, Chinmay and Sarkar, Soumik},
-    title={RLS3: RL-Based Synthetic Sample Selection to Enhance Spatial Reasoning in Vision-Language Models for Indoor Autonomous Perception},
-    booktitle={2025 ACM/IEEE 16th International Conference on Cyber-Physical Systems (ICCPS)}, 
-    year={2025},  
-    volume={},  
-    number={},  
-    pages={},  
-    keywords={spatial reasoning; synthetic data generation; self-improving sampling; vision-language models},
-    doi={10.48550/arXiv.2501.18880}
-  }
+@inproceedings{10.1145/3716550.3722033,
+author = {Waite, Joshua R. and Hasan, Md Zahid and Liu, Qisai and Jiang, Zhanhong and Hegde, Chinmay and Sarkar, Soumik},
+title = {RLS3: RL-Based Synthetic Sample Selection to Enhance Spatial Reasoning in Vision-Language Models for Indoor Autonomous Perception},
+year = {2025},
+isbn = {9798400714986},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3716550.3722033},
+doi = {10.1145/3716550.3722033},
+booktitle = {Proceedings of the ACM/IEEE 16th International Conference on Cyber-Physical Systems (with CPS-IoT Week 2025)},
+articleno = {28},
+numpages = {10},
+keywords = {self-improving sampling, spatial reasoning, synthetic data generation, vision-language models},
+location = {Irvine, CA, USA},
+series = {ICCPS '25}
+}
 ```
 
 # Website License
